@@ -17,7 +17,7 @@ export const Base: VFC<Props> = ({ label, icon, className }) => {
       )}
     >
       {icon}
-      <span className="text-white text-xs ml-3 w-max">{label}</span>
+      <span className="text-white text-xs ml-2.5 w-max">{label}</span>
     </div>
   );
 };
