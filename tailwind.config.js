@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     colors: {
       black: "#000",
-      white: "#fff",
+      white: "#f7f7f7",
       current: "currentColor",
       transparent: "transparent",
 
@@ -24,7 +24,18 @@ module.exports = {
       medium: "500",
       semibold: "600",
     },
-    extend: {},
+    extend: {
+      keyframes: {
+        "fade-in-down": {
+          "0%": { opacity: 0, transform: "translateY(0%)" },
+          "50%": { opacity: 1 },
+          "100%": { opacity: 0, transform: "translateY(100%)" },
+        },
+      },
+      animation: {
+        "fade-in-down": "fade-in-down 3s infinite linear",
+      },
+    },
   },
   variants: {
     extend: {},
