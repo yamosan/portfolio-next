@@ -11,6 +11,7 @@
     "prefer-arrow-callback": "error",
     "simple-import-sort/imports": "error",
     "simple-import-sort/exports": "error",
+    "no-restricted-imports": ["error", { "paths": [{ "name": "react", "importNames": ["default"] }] }],
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "@typescript-eslint/no-unused-vars": ["error", { "varsIgnorePattern": "^_", "argsIgnorePattern": "^_" }],
     "@typescript-eslint/no-var-requires": "off",
