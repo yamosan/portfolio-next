@@ -9,13 +9,16 @@ type Props = {
 
 export const SkillMore: VFC<Props> = ({ keywords }) => {
   return (
-    <div className="flex flex-col items-center group" tabIndex={1}>
+    <div
+      className="flex flex-col items-center group rounded-sm outline-none focus-visible:ring-2 focus-visible:ring-main"
+      tabIndex={1}
+    >
       <span>
         <Arrow width={18} height={18} />
       </span>
       <div
         className={clsx(
-          "relative flex justify-center invisible opacity-0",
+          "relative flex justify-center  invisible opacity-0",
           "transition-all duration-200 group-hover:visible group-hover:opacity-100 group-focus:visible group-focus:opacity-100"
         )}
       >

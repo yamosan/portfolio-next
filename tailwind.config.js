@@ -11,6 +11,7 @@ module.exports = {
       current: "currentColor",
       transparent: "transparent",
 
+      main: "#eeba10",
       gray: "#323237", // rgb(50, 50, 55)
       grayDark: "#0f0f11", // rgb(15, 15, 17)
     },
