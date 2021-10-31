@@ -27,7 +27,7 @@ const ABOUT_ME = [
 
 const Root: NextPage = () => {
   return (
-    <div className="bg-black min-h-screen">
+    <>
       <section className="relative flex items-center justify-center h-screen">
         <h1 className="text-white text-6xl font-semibold">
           Hello, I&apos;m Yam<span className="text-main">o</span>.
@@ -63,7 +63,7 @@ const Root: NextPage = () => {
           </div>
         </div>
       </section>
-    </div>
+    </>
   );
 };
 
