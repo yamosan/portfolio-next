@@ -33,6 +33,7 @@ module.exports = {
       maxWidth: { ...APP_MAX_WIDTH_UTIL },
       height: { ...HEADER_UTIL },
       padding: { ...HEADER_UTIL },
+      inset: { ...HEADER_UTIL },
       keyframes: {
         "fade-in-down": {
           "0%": { opacity: 0, transform: "translateY(0%)" },
