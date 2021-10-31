@@ -5,8 +5,7 @@ import { useMemo } from "react";
 import Zoom from "react-medium-image-zoom";
 
 import { Image } from "@/shared/components/basics/Image";
-
-import { useCurrentBreakpoint } from "../../hooks/useCurrentBreakpoint";
+import { useCurrentBreakpoint } from "@/shared/hooks/useCurrentBreakpoint";
 
 type Props = {
   src: string;

@@ -4,6 +4,7 @@ import Link from "next/link";
 import type { ComponentProps, VFC } from "react";
 import { useCallback } from "react";
 
+import { useCurrentBreakpoint } from "@/shared/hooks/useCurrentBreakpoint";
 import { useBgState } from "@/shared/store/bgState";
 
 type Props = ComponentProps<"header">;
@@ -11,6 +12,8 @@ type Props = ComponentProps<"header">;
 export const Header: VFC<Props> = ({ className, ...attrs }) => {
   const { setCount } = useBgState();
   const router = useRouter();
+
+  const { isSm } = useCurrentBreakpoint();
 
   const handleClick = useCallback(() => {
     if (setCount) {
@@ -31,7 +34,12 @@ export const Header: VFC<Props> = ({ className, ...attrs }) => {
       className={clsx("h-thead fixed top-0 w-full px-8 flex items-center justify-between text-white", className)}
       {...attrs}
     >
-      <button onClick={handleClick}>logo</button>
+      {/* TODO: ロゴ */}
+      {isSm && (
+        <button onClick={handleClick} className="font-semibold">
+          yamo&apos;s portfolio
+        </button>
+      )}
       <GlobalNav />
     </header>
   );

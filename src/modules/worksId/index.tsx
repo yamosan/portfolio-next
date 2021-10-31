@@ -1,13 +1,13 @@
 import type { GetStaticPaths, GetStaticProps, NextPage } from "next";
 
 import { ViewSource, VisitWebsite } from "@/modules/worksId/components/IconBadge";
+import { useCurrentBreakpoint } from "@/shared/hooks/useCurrentBreakpoint";
 import { getAllWorks, getWorkById } from "@/shared/utils/works";
 import type { Work } from "@/types/work";
 
 import { Contents } from "./components/Contents";
 import { Thumbnail } from "./components/Thumbnail";
 import { WorkInfo } from "./components/WorkInfo";
-import { useCurrentBreakpoint } from "./hooks/useCurrentBreakpoint";
 
 type Props = {
   work: Work;
