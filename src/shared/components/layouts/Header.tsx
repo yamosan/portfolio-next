@@ -17,7 +17,7 @@ export const Header: VFC<Props> = ({ className, ...attrs }) => {
       if (router && router.pathname === "/") {
         const elm = document.getElementById("sroot");
         if (elm) {
-          elm.scrollTo({ top: 0, behavior: "smooth" });
+          elm.scrollTo({ top: 0 });
         }
       } else {
         router.push("/");
