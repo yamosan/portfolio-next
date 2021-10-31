@@ -13,7 +13,10 @@ const Layout: FC = ({ children }) => {
     <>
       <Background />
       <Header className="z-20" />
-      <main className="z-10 relative h-screen scrollbar-thin scrollbar-track-gray scrollbar-thumb-main scrollbar-thumb-rounded-full">
+      <main
+        id="sroot"
+        className="z-10 relative h-screen scrollbar-thin scrollbar-track-gray scrollbar-thumb-main scrollbar-thumb-rounded-full"
+      >
         {children}
       </main>
     </>

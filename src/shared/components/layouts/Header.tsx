@@ -1,4 +1,5 @@
 import clsx from "clsx";
+import { useRouter } from "next/dist/client/router";
 import Link from "next/link";
 import type { ComponentProps, VFC } from "react";
 import { useCallback } from "react";
@@ -9,12 +10,21 @@ type Props = ComponentProps<"header">;
 
 export const Header: VFC<Props> = ({ className, ...attrs }) => {
   const { setCount } = useBgState();
+  const router = useRouter();
 
   const handleClick = useCallback(() => {
     if (setCount) {
+      if (router && router.pathname === "/") {
+        const elm = document.getElementById("sroot");
+        if (elm) {
+          elm.scrollTo({ top: 0, behavior: "smooth" });
+        }
+      } else {
+        router.push("/");
+      }
       setCount((count) => count + 1);
     }
-  }, [setCount]);
+  }, [setCount, router]);
 
   return (
     <header

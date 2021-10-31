@@ -1,5 +1,7 @@
 import type { NextPage } from "next";
 import type { VFC } from "react";
+import { useCallback } from "react";
+import { useRef } from "react";
 
 import { Image } from "@/shared/components/basics/Image";
 
@@ -27,6 +29,11 @@ const ABOUT_ME = [
 ];
 
 const Root: NextPage = () => {
+  const aboutRef = useRef<HTMLDivElement>(null);
+  const handleClick = useCallback(() => {
+    aboutRef.current?.scrollIntoView({ behavior: "smooth" });
+  }, []);
+
   return (
     <>
       <section className="relative flex items-center justify-center h-screen">
@@ -36,14 +43,17 @@ const Root: NextPage = () => {
             I&apos;m Yam<span className="text-main">o</span>.
           </span>
         </h1>
-        <div className="absolute bottom-0 mb-10">
+        <button onClick={handleClick} className="block absolute bottom-0 mb-10">
           <p className="text-white font-regular">about me!</p>
           <div className="animate-fade-in-down" aria-hidden>
             <div className="mx-auto w-4 h-4 border-main border-b-2 border-r-2 transform origin-center rotate-45"></div>
           </div>
-        </div>
+        </button>
       </section>
-      <section className="flex flex-col space-y-6 lg:space-y-12 items-center justify-center pt-28 sm:pt-48 lg:pt-0 min-h-screen">
+      <section
+        ref={aboutRef}
+        className="flex flex-col space-y-6 lg:space-y-12 items-center justify-center pt-28 sm:pt-48 lg:pt-0 min-h-screen"
+      >
         <h2 className="w-max text-white text-lg font-medium relative after:absolute after:bg-main after:h-0.5 after:w-7/12 after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:transform">
           ABOUT ME
         </h2>
