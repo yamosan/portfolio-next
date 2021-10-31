@@ -3,9 +3,6 @@ import type { FC } from "react";
 
 import { Header } from "./Header";
 
-// import { useState } from "react";
-// import Background from "./background";
-
 const Background = dynamic(() => import("./background"), { ssr: false });
 
 const Layout: FC = ({ children }) => {
