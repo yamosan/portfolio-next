@@ -5,6 +5,7 @@ import { ViewSource, VisitWebsite } from "@/modules/worksId/components/IconBadge
 import { getAllWorks, getWorkById } from "@/shared/utils/works";
 import type { Work } from "@/types/work";
 
+import { Thumbnail } from "./components/Thumbnail";
 import { WorkInfo } from "./components/WorkInfo";
 
 type Props = {
@@ -38,7 +39,7 @@ export const WorksId: NextPage<Props> = ({ work }) => {
       </aside>
 
       <main style={{ width: "calc(100% - 310px)" }}>
-        
+        <Thumbnail title={work.title} thumbnail={work.thumbnail} />
       </main>
     </div>
   );
