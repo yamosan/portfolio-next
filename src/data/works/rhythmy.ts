@@ -1,6 +1,6 @@
 import type { Work } from "@/types/work";
 
-const data: Work = {
+const rhythmy: Work = {
   id: "rhythmy",
   thumbnail: {
     imageUrl: "/images/works/rhythmy/thumbnail.png",
@@ -56,4 +56,4 @@ const data: Work = {
   ],
 };
 
-export default data;
+export default rhythmy;

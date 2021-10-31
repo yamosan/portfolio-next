@@ -1,6 +1,6 @@
 import type { Work } from "@/types/work";
 
-const data: Work = {
+const helium: Work = {
   id: "helium",
   thumbnail: {
     imageUrl: "/images/works/helium/thumbnail.png",
@@ -41,4 +41,4 @@ const data: Work = {
     },
   ],
 };
-export default data;
+export default helium;

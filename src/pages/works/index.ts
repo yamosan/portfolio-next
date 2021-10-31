@@ -1,3 +1,4 @@
-import WorksId from "@/modules/worksId";
+import { getStaticProps, Works } from "@/modules/works";
 
-export default WorksId;
+export { getStaticProps };
+export default Works;

@@ -1,6 +1,6 @@
 import type { Work } from "@/types/work";
 
-const data: Work = {
+const tetris: Work = {
   id: "tetris",
   thumbnail: {
     imageUrl: "/images/works/tetris/thumbnail.jpg",
@@ -30,4 +30,4 @@ const data: Work = {
     },
   ],
 };
-export default data;
+export default tetris;
