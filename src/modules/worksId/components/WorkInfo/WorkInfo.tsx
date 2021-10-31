@@ -1,18 +1,16 @@
 import clsx from "clsx";
 import type { VFC } from "react";
 
+import type { Work } from "@/types/work";
+
 import { SkillMore } from "./SkillMore";
 
 type Props = {
-  title: string;
-  genre: string;
-  role: string;
-  skill: string;
-  skillKeywords: string[];
-  period: string;
+  work: Work;
 };
 
-export const WorkInfo: VFC<Props> = ({ title, genre, role, skill, skillKeywords, period }) => {
+export const WorkInfo: VFC<Props> = ({ work }) => {
+  const { title, genre, role, skills, period } = work;
   return (
     <div
       className={clsx(
@@ -31,9 +29,9 @@ export const WorkInfo: VFC<Props> = ({ title, genre, role, skill, skillKeywords,
         </div>
         <div className="flex items-end">
           <dt className="text-xl font-medium">Skill:</dt>
-          <dd className="ml-2 text-lg font-light">{skill}</dd>
+          <dd className="ml-2 text-lg font-light">{skills.main}</dd>
           <div className="ml-2 self-center">
-            <SkillMore keywords={skillKeywords} />
+            <SkillMore keywords={skills.others} />
           </div>
         </div>
         <div className="flex items-end">

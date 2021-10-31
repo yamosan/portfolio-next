@@ -12,7 +12,6 @@ type Props = {
 };
 
 export const Works: NextPage<Props> = ({ works }) => {
-  console.log({ works });
   return (
     <>
       <div className="pt-48 flex flex-col items-center">
