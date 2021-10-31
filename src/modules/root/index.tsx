@@ -39,8 +39,8 @@ const Root: NextPage = () => {
     <>
       <section className="relative flex items-center justify-center h-screen">
         <h1 className="text-white text-6xl font-semibold flex flex-col sm:flex-row">
-          <span className="inline-block">Hello,</span>
-          <span className="inline-block">
+          <span>Hello,&ensp;</span>
+          <span>
             I&apos;m Yam<span className="text-main">o</span>.
           </span>
         </h1>
