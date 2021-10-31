@@ -6,7 +6,7 @@ import { WorkInfo } from "./components/WorkInfo";
 
 const Works: NextPage = () => {
   return (
-    <div className="h-screen w-screen bg-black flex flex-col space-y-8 items-center justify-center">
+    <div className="h-screen w-screen flex flex-col space-y-8 items-center justify-center">
       <WorkInfo
         title="Conne!"
         genre="Web"
