@@ -15,7 +15,7 @@ export const Header: VFC<Props> = ({ className, ...attrs }) => {
   const handleClick = useCallback(() => {
     if (setCount) {
       if (router && router.pathname === "/") {
-        const elm = document.getElementById("sroot");
+        const elm = document.getElementById("root");
         if (elm) {
           elm.scrollTo({ top: 0 });
         }
