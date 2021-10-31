@@ -43,7 +43,7 @@ const Root: NextPage = () => {
         <h2 className="w-max text-white text-lg font-medium relative after:absolute after:bg-main after:h-0.5 after:w-7/12 after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:transform">
           ABOUT ME
         </h2>
-        <div className="bg-grayDark bg-opacity-70 py-14 px-8 w-4/5 max-w-[1100px] mx-auto flex justify-between items-center rounded-md">
+        <div className="bg-grayDark bg-opacity-70 py-14 px-8 w-4/5 max-w-app mx-auto flex justify-between items-center rounded-md">
           <div className="flex-[3]">
             <div className="mx-auto relative rounded-full overflow-hidden w-56 h-56">
               <Image layout="fill" src="/images/headshot.jpg" alt="私の写真" />

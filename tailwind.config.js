@@ -1,5 +1,10 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
 
+const HEADER_HEIGHT = "72px";
+const HEADER_UTIL = { thead: HEADER_HEIGHT };
+const APP_MAX_WIDTH = "1100px";
+const APP_MAX_WIDTH_UTIL = { app: APP_MAX_WIDTH };
+
 module.exports = {
   mode: "jit",
   purge: ["./src/**/*.{ts,tsx}"],
@@ -25,6 +30,9 @@ module.exports = {
       semibold: "600",
     },
     extend: {
+      maxWidth: { ...APP_MAX_WIDTH_UTIL },
+      height: { ...HEADER_UTIL },
+      padding: { ...HEADER_UTIL },
       keyframes: {
         "fade-in-down": {
           "0%": { opacity: 0, transform: "translateY(0%)" },
