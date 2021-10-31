@@ -3,7 +3,7 @@ import type { Work } from "@/types/work";
 const rhythmy: Work = {
   id: "rhythmy",
   thumbnail: {
-    imageUrl: "/images/works/rhythmy/thumbnail.png",
+    imageUrl: "/images/works/rhythmy/thumbnail.jpg",
     youtubeId: "3pl65K2d82w",
   },
   title: "rhythmy",

@@ -1,7 +1,11 @@
 import type { GetStaticProps, NextPage } from "next";
 
+import { Underlined } from "@/shared/components/basics/Underlined";
 import { getAllWorks } from "@/shared/utils/works";
 import type { Work } from "@/types/work";
+
+import { Grid, GridItem } from "./components/Grid";
+import { ThumbnailCard } from "./components/ThumbnailCard";
 
 type Props = {
   works: Work[];
@@ -11,7 +15,16 @@ export const Works: NextPage<Props> = ({ works }) => {
   console.log({ works });
   return (
     <>
-      <h1>{JSON.stringify(works)}</h1>
+      <div className="pt-48 flex flex-col items-center">
+        <Underlined as="h1">WORKS</Underlined>
+        <Grid className="w-11/12 sm:w-4/5 max-w-[1000px] my-12">
+          {works.map((work) => (
+            <GridItem key={work.id}>
+              <ThumbnailCard work={work} />
+            </GridItem>
+          ))}
+        </Grid>
+      </div>
     </>
   );
 };
