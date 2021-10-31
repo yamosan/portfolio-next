@@ -31,15 +31,17 @@ export const Header: VFC<Props> = ({ className, ...attrs }) => {
 
   return (
     <header
-      className={clsx("h-thead fixed top-0 w-full px-8 flex items-center justify-between text-white", className)}
+      className={clsx(
+        "h-thead fixed top-0 w-full px-5 sm:px-8 flex items-center justify-between text-white",
+        className
+      )}
       {...attrs}
     >
       {/* TODO: ロゴ */}
-      {isSm && (
-        <button onClick={handleClick} className="font-semibold">
-          yamo&apos;s portfolio
-        </button>
-      )}
+      <button onClick={handleClick} className="font-semibold">
+        yamo&apos;s portfolio
+      </button>
+
       <GlobalNav />
     </header>
   );
