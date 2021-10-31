@@ -1,5 +1,4 @@
 import type { GetStaticPaths, GetStaticProps, NextPage } from "next";
-import Link from "next/link";
 
 import { ViewSource, VisitWebsite } from "@/modules/worksId/components/IconBadge";
 import { getAllWorks, getWorkById } from "@/shared/utils/works";
@@ -19,27 +18,19 @@ export const WorksId: NextPage<Props> = ({ work }) => {
         <ul className="mt-6 flex justify-center space-x-2">
           {work.urls?.site && (
             <li>
-              <Link href={work.urls?.site}>
-                <a className="block">
-                  <ViewSource />
-                </a>
-              </Link>
+              <ViewSource href={work.urls?.site} />
             </li>
           )}
           {work.urls?.repository && (
             <li>
-              <Link href={work.urls?.repository}>
-                <a className="block">
-                  <VisitWebsite />
-                </a>
-              </Link>
+              <VisitWebsite href={work.urls?.repository} />
             </li>
           )}
         </ul>
       </aside>
 
       <main style={{ width: "calc(100% - 310px)" }}>
-        <Thumbnail title={work.title} thumbnail={work.thumbnail} />
+        <Thumbnail title={work.title} thumbnailUrl={work.thumbnail.imageUrl} youtubeId={work.thumbnail.youtubeId} />
       </main>
     </div>
   );
