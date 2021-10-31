@@ -14,11 +14,11 @@ export const WorkInfo: VFC<Props> = ({ work }) => {
   return (
     <div
       className={clsx(
-        "bg-grayDark bg-opacity-70 rounded-lg border border-white border-opacity-50 p-5 min-w-[280px] text-white"
+        "bg-grayDark bg-opacity-70 rounded-lg border border-white border-opacity-50 px-5 py-5 text-white"
       )}
     >
       <h3 className="font-semibold text-2xl text-center">{title}</h3>
-      <dl className="mt-5 flex flex-col space-y-6">
+      <dl className="mt-4 flex flex-col space-y-4">
         <div className="flex items-end">
           <dt className="text-xl font-medium">Genre:</dt>
           <dd className="ml-2 text-lg font-light">{genre}</dd>

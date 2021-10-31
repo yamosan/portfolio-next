@@ -1,4 +1,5 @@
 import type { GetStaticPaths, GetStaticProps, NextPage } from "next";
+import Link from "next/link";
 
 import { ViewSource, VisitWebsite } from "@/modules/worksId/components/IconBadge";
 import { getAllWorks, getWorkById } from "@/shared/utils/works";
@@ -11,17 +12,34 @@ type Props = {
 };
 export const WorksId: NextPage<Props> = ({ work }) => {
   return (
-    <div className="h-screen w-screen flex flex-col space-y-8 items-center justify-center">
-      <WorkInfo work={work} />
+    <div className="h-screen w-10/12 mx-auto pt-28 flex justify-between">
+      <aside className="flex-shrink-0" style={{ width: "280px" }}>
+        <WorkInfo work={work} />
+        <ul className="mt-6 flex justify-center space-x-2">
+          {work.urls?.site && (
+            <li>
+              <Link href={work.urls?.site}>
+                <a className="block">
+                  <ViewSource />
+                </a>
+              </Link>
+            </li>
+          )}
+          {work.urls?.repository && (
+            <li>
+              <Link href={work.urls?.repository}>
+                <a className="block">
+                  <VisitWebsite />
+                </a>
+              </Link>
+            </li>
+          )}
+        </ul>
+      </aside>
 
-      <ul className="flex space-x-2">
-        <li>
-          <ViewSource />
-        </li>
-        <li>
-          <VisitWebsite />
-        </li>
-      </ul>
+      <main style={{ width: "calc(100% - 310px)" }}>
+        
+      </main>
     </div>
   );
 };
