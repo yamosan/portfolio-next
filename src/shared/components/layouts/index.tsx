@@ -9,11 +9,12 @@ const Layout: FC = ({ children }) => {
   return (
     <>
       <Background />
-      <Header className="z-20" />
       <div
         id="root"
-        className="z-10 relative h-screen scrollbar-thin scrollbar-track-gray scrollbar-thumb-main scrollbar-thumb-rounded-full"
+        className="relative h-screen scrollbar-thin scrollbar-track-gray scrollbar-thumb-main scrollbar-thumb-rounded-full"
       >
+        <Header />
+
         {children}
       </div>
     </>

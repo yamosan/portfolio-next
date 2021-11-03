@@ -1,18 +1,18 @@
 import clsx from "clsx";
 import { useRouter } from "next/dist/client/router";
-import Link from "next/link";
 import type { ComponentProps, VFC } from "react";
 import { useCallback } from "react";
 
 import { useCurrentBreakpoint } from "@/shared/hooks/useCurrentBreakpoint";
 import { useBgState } from "@/shared/store/bgState";
 
+import { DrawerMenu, FlexMenu } from "./GlobalNav";
+
 type Props = ComponentProps<"header">;
 
 export const Header: VFC<Props> = ({ className, ...attrs }) => {
   const { setCount } = useBgState();
   const router = useRouter();
-
   const { isSm } = useCurrentBreakpoint();
 
   const handleClick = useCallback(() => {
@@ -32,7 +32,7 @@ export const Header: VFC<Props> = ({ className, ...attrs }) => {
   return (
     <header
       className={clsx(
-        "h-thead fixed top-0 w-full px-5 sm:px-8 flex items-center justify-between text-white",
+        "fixed z-10 h-thead top-0 w-full px-5 sm:px-8 flex items-center justify-between text-white",
         className
       )}
       {...attrs}
@@ -42,31 +42,7 @@ export const Header: VFC<Props> = ({ className, ...attrs }) => {
         yamo&apos;s portfolio
       </button>
 
-      <GlobalNav />
+      {isSm ? <FlexMenu /> : <DrawerMenu />}
     </header>
-  );
-};
-
-const GlobalNav: VFC = () => {
-  return (
-    <nav>
-      <ul className="flex items-center space-x-10 font-semibold">
-        <li>
-          <Link href="/">
-            <a>Home</a>
-          </Link>
-        </li>
-        <li>
-          <Link href="/works">
-            <a>Works</a>
-          </Link>
-        </li>
-        <li>
-          <Link href="/contact">
-            <a>Contact</a>
-          </Link>
-        </li>
-      </ul>
-    </nav>
   );
 };
