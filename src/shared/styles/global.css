@@ -12,3 +12,58 @@
     @apply outline-none focus-visible:ring-2 focus-visible:ring-main rounded;
   }
 }
+
+/* ------------------------------------------------------------ */
+/* TODO: ホバーを外した時に逆向きでアニメーションさせたい */
+/* TODO: 色反転 */
+@keyframes cursor {
+  0% {
+    cursor: url("/images/cursor/23x23.png") 11 11, auto;
+  }
+  10% {
+    cursor: url("/images/cursor/25x25.png") 12 12, auto;
+  }
+  20% {
+    cursor: url("/images/cursor/27x27.png") 13 13, auto;
+  }
+  30% {
+    cursor: url("/images/cursor/29x29.png") 14 14, auto;
+  }
+  40% {
+    cursor: url("/images/cursor/31x31.png") 15 15, auto;
+  }
+  50% {
+    cursor: url("/images/cursor/33x33.png") 16 16, auto;
+  }
+  60% {
+    cursor: url("/images/cursor/35x35.png") 17 17, auto;
+  }
+  70% {
+    cursor: url("/images/cursor/37x37.png") 18 18, auto;
+  }
+  80% {
+    cursor: url("/images/cursor/39x39.png") 19 19, auto;
+  }
+  90% {
+    cursor: url("/images/cursor/41x41.png") 20 20, auto;
+  }
+  100% {
+    cursor: url("/images/cursor/43x43.png") 21 21, auto;
+  }
+}
+
+body {
+  animation: cursor ease-out 150ms 1 reverse;
+  cursor: url("/images/cursor/23x23.png") 11 11, auto;
+}
+
+a,
+button {
+  cursor: url("/images/cursor/23x23.png") 11 11, auto;
+}
+
+a:hover,
+button:hover {
+  animation: cursor ease-out 150ms 1;
+  cursor: url("/images/cursor/43x43.png") 21 21, auto;
+}
