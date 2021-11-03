@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import { useCallback } from "react";
 import { useRef } from "react";
 
+import { Div100vh } from "@/shared/components/basics/Div100vh";
 import { Underlined } from "@/shared/components/basics/Underlined";
 
 import { SelfIntroductionCard } from "./components/SelfIntroductionCard";
@@ -14,7 +15,7 @@ const Root: NextPage = () => {
 
   return (
     <>
-      <section className="relative flex items-center justify-center h-screen">
+      <Div100vh as="section" className="relative flex items-center justify-center">
         <h1 className="text-white text-6xl font-semibold flex flex-col sm:flex-row">
           <span>Hello,&ensp;</span>
           <span>
@@ -29,10 +30,10 @@ const Root: NextPage = () => {
             </div>
           </div>
         </button>
-      </section>
+      </Div100vh>
       <section
         ref={aboutRef}
-        className="flex flex-col space-y-6 lg:space-y-12 items-center justify-center pt-28 sm:pt-48 lg:pt-0 min-h-screen"
+        className="flex flex-col space-y-6 lg:space-y-12 items-center justify-center pb-12 sm:pb-0 pt-48 lg:pt-0 min-h-screen"
       >
         <Underlined as="h2">ABOUT ME</Underlined>
         <SelfIntroductionCard className="w-11/12 max-w-app mx-auto" />
