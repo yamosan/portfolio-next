@@ -1,3 +1,4 @@
+import { isMobile } from "react-device-detect";
 import type { P5Instance } from "react-p5-wrapper";
 
 import ZodiacSign from "./parts/ZodiacSign";
@@ -41,7 +42,7 @@ const sketch = (p: P5Instance) => {
 
   p.windowResized = () => {
     p.resizeCanvas(p.windowWidth, p.windowHeight);
-    initializeBackground();
+    if (!isMobile) initializeBackground();
   };
 
   function initializeBackground() {
