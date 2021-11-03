@@ -1,6 +1,8 @@
-import p5 from "p5";
+import type p5 from "p5";
+
+import type P5Component from "@/sketch/types/P5Component";
+
 import Snake from "./Snake";
-import P5Component from "sketche/types/P5Component";
 
 // TODO: this.p.frameRate()から計算してアニメーション速度を一定にする
 class ZodiacSign implements P5Component {
@@ -10,13 +12,7 @@ class ZodiacSign implements P5Component {
   dt: number;
   falling: boolean;
 
-  constructor(
-    private p: p5,
-    private x: number,
-    private y: number,
-    private width: number,
-    private height: number
-  ) {
+  constructor(private p: p5, private x: number, private y: number, private width: number, private height: number) {
     this.children = this.initializeChildren();
     this.bg = [this.children, this.children];
 
@@ -117,8 +113,8 @@ class ZodiacSign implements P5Component {
   private getDimension(base: number): [w: number, h: number] {
     const ratio = this.getLongSide() / this.getShortSide();
     const wIsLonger = this.width >= this.height;
-    let low: number, high: number;
-    low = base * 1;
+    let high: number;
+    const low = base * 1;
     if (this.p.floor(base * ratio) % 2 === 0) {
       high = this.p.floor(base * ratio);
     } else {
@@ -130,10 +126,7 @@ class ZodiacSign implements P5Component {
   }
 
   // helper method
-  private divide(
-    baseSize: number,
-    parentSize: number
-  ): [n: number, rest: number] {
+  private divide(baseSize: number, parentSize: number): [n: number, rest: number] {
     const n = Math.floor(parentSize / baseSize);
     const rest = parentSize - baseSize * n;
     return [n, rest];

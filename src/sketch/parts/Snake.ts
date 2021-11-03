@@ -1,5 +1,6 @@
-import p5 from "p5";
-import P5Component from "sketche/types/P5Component";
+import type p5 from "p5";
+
+import type P5Component from "@/sketch/types/P5Component";
 
 class Snake implements P5Component {
   readonly position: p5.Vector;
@@ -75,9 +76,7 @@ class Snake implements P5Component {
   private drawSnake(min: number, max: number) {
     this.p.push();
     this.vertices.reduce((prev, cur, i) => {
-      const color = this.p.color(
-        this.p.map(i, 0, this.vertices.length - 1, min, max)
-      );
+      const color = this.p.color(this.p.map(i, 0, this.vertices.length - 1, min, max));
       this.p.stroke(color);
       this.p.line(prev.x, prev.y, cur.x, cur.y);
       return cur;
@@ -98,12 +97,7 @@ class Snake implements P5Component {
   private drawFrame() {
     this.p.push();
     this.p.stroke(100);
-    this.p.rect(
-      this.position.x - this.width / 2,
-      this.position.y - this.height / 2,
-      this.width,
-      this.height
-    );
+    this.p.rect(this.position.x - this.width / 2, this.position.y - this.height / 2, this.width, this.height);
     this.p.pop();
   }
 
@@ -115,12 +109,8 @@ class Snake implements P5Component {
   }
 
   private inside(x: number, y: number): boolean {
-    const xCondition =
-      this.position.x - this.width / 2 <= x &&
-      x <= this.position.x + this.width / 2;
-    const yCondition =
-      this.position.y - this.height / 2 <= y &&
-      y <= this.position.y + this.height / 2;
+    const xCondition = this.position.x - this.width / 2 <= x && x <= this.position.x + this.width / 2;
+    const yCondition = this.position.y - this.height / 2 <= y && y <= this.position.y + this.height / 2;
     if (xCondition && yCondition) {
       return true;
     }
