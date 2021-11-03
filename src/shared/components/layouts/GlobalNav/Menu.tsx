@@ -43,7 +43,9 @@ export const Menu = forwardRef<HTMLUListElement, Props>((props, ref) => {
     <ul ref={ref} className={clsx(className)} {...attrs}>
       {MENU_LIST.map((menu) => (
         <li key={menu.text}>
-          <button onClick={(e) => handleClick(e, menu.path)}>{menu.text}</button>
+          <button onClick={(e) => handleClick(e, menu.path)} className="p-1.5 font-inherit">
+            {menu.text}
+          </button>
         </li>
       ))}
     </ul>

@@ -45,9 +45,11 @@ const Root: NextPage = () => {
           </span>
         </h1>
         <button onClick={handleClick} className="block absolute bottom-0 mb-10">
-          <p className="text-white font-regular">about me!</p>
-          <div className="animate-fade-in-down" aria-hidden>
-            <div className="mx-auto w-4 h-4 border-main border-b-2 border-r-2 transform origin-center rotate-45"></div>
+          <div className="relative p-1.5">
+            <p className="text-white font-regular">about me!</p>
+            <div className="animate-fade-in-down" aria-hidden>
+              <div className="absolute left-1/2 -translate-x-1/2 mx-auto w-4 h-4 border-main border-b-2 border-r-2 transform origin-center rotate-45"></div>
+            </div>
           </div>
         </button>
       </section>

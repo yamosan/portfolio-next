@@ -24,6 +24,7 @@ module.exports = {
       sans: ["Work Sans", ...defaultTheme.fontFamily.sans],
     },
     fontWeight: {
+      inherit: "inherit",
       light: "300",
       regular: "400",
       medium: "500",

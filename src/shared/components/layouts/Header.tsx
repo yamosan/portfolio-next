@@ -38,7 +38,7 @@ export const Header: VFC<Props> = ({ className, ...attrs }) => {
       {...attrs}
     >
       {/* TODO: ロゴ */}
-      <button onClick={handleClick} className="font-semibold">
+      <button onClick={handleClick} className="font-semibold p-1.5">
         yamo&apos;s portfolio
       </button>
 
