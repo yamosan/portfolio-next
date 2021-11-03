@@ -9,6 +9,7 @@ export const DrawerMenu: VFC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleOpen = useCallback(() => setIsOpen((prev) => !prev), []);
+  const close = useCallback(() => setIsOpen(false), []);
 
   const dialogRef = useRef<HTMLDivElement | null>(null);
   const toggleBtnRef = useRef<HTMLButtonElement | null>(null);
@@ -19,20 +20,24 @@ export const DrawerMenu: VFC = () => {
     <>
       <nav
         className={clsx(
-          "fixed inset-0 flex justify-center items-center bg-black bg-opacity-90 transition-all duration-500",
+          "fixed z-40 inset-0 flex justify-center items-center bg-black bg-opacity-90 transition-all duration-500",
           {
-            "visible opacity-100 pointer-events-auto": isOpen,
-            "invisible opacity-0 pointer-events-none": !isOpen,
+            "visible opacity-100": isOpen,
+            "invisible opacity-0": !isOpen,
           }
         )}
         ref={dialogRef}
         tabIndex={-1}
         role="dialog"
       >
-        <Menu prefetch={isOpen} className="flex flex-col items-center space-y-10 font-semibold text-white text-2xl" />
+        <Menu
+          onLinkClick={close}
+          prefetch={isOpen}
+          className="flex flex-col items-center space-y-10 font-semibold text-white text-2xl"
+        />
       </nav>
 
-      <Hamburger onClick={toggleOpen} buttonRole={isOpen ? "close" : "open"} ref={toggleBtnRef} />
+      <Hamburger className="z-40" onClick={toggleOpen} buttonRole={isOpen ? "close" : "open"} ref={toggleBtnRef} />
     </>
   );
 };
