@@ -19,7 +19,7 @@ const portfolio: Work = {
   content: [
     {
       head: "outline",
-      description: [`本サイトです。デザインからコーディングまで1人で行いました。`],
+      description: [`本サイトです。デザインからコーディングまで1人で制作しました。`],
     },
     {
       head: "concept",
