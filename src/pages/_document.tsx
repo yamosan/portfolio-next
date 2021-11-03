@@ -8,7 +8,7 @@ export default class MyDocument extends Document {
   }
   render(): JSX.Element {
     return (
-      <Html lang="ja" style={{ background: "black" }}>
+      <Html lang="ja" style={{ background: "black", minHeight: "100vh" }}>
         <Head>
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />

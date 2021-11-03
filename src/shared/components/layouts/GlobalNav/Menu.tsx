@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import type { ComponentPropsWithoutRef } from "react";
 import { forwardRef, useCallback, useEffect, useState } from "react";
 
+import { Underlined } from "../../basics/Underlined";
 import { MENU_LIST } from "./constants";
 
 type Props = {
@@ -44,7 +45,7 @@ export const Menu = forwardRef<HTMLUListElement, Props>((props, ref) => {
       {MENU_LIST.map((menu) => (
         <li key={menu.text}>
           <button onClick={(e) => handleClick(e, menu.path)} className="p-1.5 font-inherit">
-            {menu.text}
+            <Underlined hoverAnimate>{menu.text}</Underlined>
           </button>
         </li>
       ))}
