@@ -1,4 +1,5 @@
 import "@/shared/styles/global.css";
+import "scroll-behavior-polyfill";
 
 import type { AppProps } from "next/app";
 import dynamic from "next/dynamic";
