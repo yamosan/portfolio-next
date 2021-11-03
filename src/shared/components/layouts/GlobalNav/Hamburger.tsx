@@ -25,8 +25,8 @@ export const Hamburger = forwardRef<HTMLButtonElement, Props>(
                 "absolute h-0.5 w-5 rounded bg-current transform",
                 "transition duration-500 ease-in-out",
                 {
-                  "rotate-45": !isOpen,
-                  "translate-y-1.5": isOpen,
+                  "rotate-45 translate-y-0": !isOpen,
+                  "rotate-0 translate-y-1.5": isOpen,
                 }
               )}
             ></div>
@@ -37,6 +37,7 @@ export const Hamburger = forwardRef<HTMLButtonElement, Props>(
                 "transition duration-500 ease-in-out",
                 {
                   "opacity-0": !isOpen,
+                  "opacity-100": isOpen,
                 }
               )}
             ></div>
@@ -46,8 +47,8 @@ export const Hamburger = forwardRef<HTMLButtonElement, Props>(
                 "absolute h-0.5 w-5 rounded bg-current transform",
                 "transition duration-500 ease-in-out",
                 {
-                  "-rotate-45": !isOpen,
-                  "-translate-y-1.5": isOpen,
+                  "-rotate-45 translate-y-0": !isOpen,
+                  "rotate-0 -translate-y-1.5": isOpen,
                 }
               )}
             ></div>
