@@ -12,6 +12,7 @@ type Props = {
   alt?: string;
 };
 
+// フォーカス時のスタイルが汚い
 export const ZoomImage: VFC<Props> = ({ src, alt }) => {
   const { isSm, isMd } = useCurrentBreakpoint();
 

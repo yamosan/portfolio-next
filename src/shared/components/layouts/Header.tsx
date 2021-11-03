@@ -32,7 +32,7 @@ export const Header: VFC<Props> = ({ className, ...attrs }) => {
   return (
     <header
       className={clsx(
-        "fixed z-50 h-thead top-0 w-full px-5 sm:px-8 flex items-center justify-between text-white bg-black bg-opacity-80",
+        "fixed z-50 h-thead top-0 w-full px-5 sm:px-8 flex items-center justify-between text-white bg-black bg-opacity-90",
         className
       )}
       {...attrs}
