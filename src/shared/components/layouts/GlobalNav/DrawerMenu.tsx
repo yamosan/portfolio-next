@@ -2,6 +2,8 @@ import clsx from "clsx";
 import type { RefObject, VFC } from "react";
 import { useCallback, useEffect, useRef, useState } from "react";
 
+import useBackfaceFixed from "@/shared/hooks/useBackfaceFixed";
+
 import { Hamburger } from "./Hamburger";
 import { Menu } from "./Menu";
 
@@ -14,6 +16,7 @@ export const DrawerMenu: VFC = () => {
   const dialogRef = useRef<HTMLDivElement | null>(null);
   const toggleBtnRef = useRef<HTMLButtonElement | null>(null);
 
+  useBackfaceFixed(isOpen);
   useFocusTrap(isOpen, dialogRef, [toggleBtnRef]);
 
   return (
