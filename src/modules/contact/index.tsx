@@ -1,11 +1,12 @@
 import type { NextPage } from "next";
 
+import { Div100vh } from "@/shared/components/basics/Div100vh";
 import { Underlined } from "@/shared/components/basics/Underlined";
 
 export const Contact: NextPage = () => {
   return (
     <>
-      <div className="flex flex-col items-center justify-center h-full min-h-screen">
+      <Div100vh className="flex flex-col items-center justify-center">
         <Underlined as="h2">CONTACT</Underlined>
         <div className="pt-10 text-white text-center">
           <p className="">ご連絡は下記gmailまでお願いします</p>
@@ -16,7 +17,7 @@ export const Contact: NextPage = () => {
             yamorimasato@gmail.com
           </a>
         </div>
-      </div>
+      </Div100vh>
     </>
   );
 };

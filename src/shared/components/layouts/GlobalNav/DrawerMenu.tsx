@@ -23,7 +23,7 @@ export const DrawerMenu: VFC = () => {
     <>
       <nav
         className={clsx(
-          "fixed z-40 inset-0 flex justify-center items-center bg-black bg-opacity-90 transition-all duration-500",
+          "fixed z-40 inset-0 flex justify-center items-center bg-black bg-opaci ty-90 transition-all duration-500",
           {
             "visible opacity-100": isOpen,
             "invisible opacity-0": !isOpen,
