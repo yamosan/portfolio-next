@@ -1,4 +1,4 @@
-import "tailwindcss/tailwind.css";
+import "@/shared/styles/global.css";
 
 import type { AppProps } from "next/app";
 
