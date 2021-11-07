@@ -4,6 +4,7 @@ import { useRef } from "react";
 
 import { Div100vh } from "@/shared/components/basics/Div100vh";
 import { Underlined } from "@/shared/components/basics/Underlined";
+import { PageSeo } from "@/shared/components/layouts/PageSeo";
 
 import { SelfIntroductionCard } from "./components/SelfIntroductionCard";
 
@@ -15,6 +16,8 @@ const Root: NextPage = () => {
 
   return (
     <>
+      <PageSeo path="/" />
+
       <Div100vh as="section" className="relative flex items-center justify-center">
         <h1 className="text-white text-6xl font-semibold flex flex-col sm:flex-row">
           <span>Hello,&ensp;</span>

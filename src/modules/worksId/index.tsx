@@ -1,6 +1,7 @@
 import type { GetStaticPaths, GetStaticProps, NextPage } from "next";
 
 import { ViewSource, VisitWebsite } from "@/modules/worksId/components/IconBadge";
+import { PageSeo } from "@/shared/components/layouts/PageSeo";
 import { useCurrentBreakpoint } from "@/shared/hooks/useCurrentBreakpoint";
 import { getAllWorks, getWorkById } from "@/shared/utils/works";
 import type { Work } from "@/types/work";
@@ -16,32 +17,36 @@ export const WorksId: NextPage<Props> = ({ work }) => {
   const { isLg } = useCurrentBreakpoint();
 
   return (
-    <div className="w-11/12 md:w-10/12 mx-auto pt-28 flex justify-between">
-      {isLg && (
-        <aside className="flex-shrink-0 z-20" style={{ width: "280px" }}>
-          <div className="sticky top-thead">
-            <WorkInfo work={work} />
-            <ul className="mt-6 flex justify-center space-x-2">
-              {work.urls?.site && (
-                <li>
-                  <ViewSource href={work.urls?.site} />
-                </li>
-              )}
-              {work.urls?.repository && (
-                <li>
-                  <VisitWebsite href={work.urls?.repository} />
-                </li>
-              )}
-            </ul>
-          </div>
-        </aside>
-      )}
+    <>
+      <PageSeo path={`/works/${work.id}`} subtitle="WORKS" />
 
-      <main style={{ width: `calc(100% - ${isLg ? "310px" : "0px"})` }}>
-        <Thumbnail title={work.title} thumbnailUrl={work.thumbnail.imageUrl} youtubeId={work.thumbnail.youtubeId} />
-        <Contents contents={work.content} className="mt-10 md:mt-20" />
-      </main>
-    </div>
+      <div className="w-11/12 md:w-10/12 mx-auto pt-28 flex justify-between">
+        {isLg && (
+          <aside className="flex-shrink-0 z-20" style={{ width: "280px" }}>
+            <div className="sticky top-thead">
+              <WorkInfo work={work} />
+              <ul className="mt-6 flex justify-center space-x-2">
+                {work.urls?.site && (
+                  <li>
+                    <ViewSource href={work.urls?.site} />
+                  </li>
+                )}
+                {work.urls?.repository && (
+                  <li>
+                    <VisitWebsite href={work.urls?.repository} />
+                  </li>
+                )}
+              </ul>
+            </div>
+          </aside>
+        )}
+
+        <main style={{ width: `calc(100% - ${isLg ? "310px" : "0px"})` }}>
+          <Thumbnail title={work.title} thumbnailUrl={work.thumbnail.imageUrl} youtubeId={work.thumbnail.youtubeId} />
+          <Contents contents={work.content} className="mt-10 md:mt-20" />
+        </main>
+      </div>
+    </>
   );
 };
 

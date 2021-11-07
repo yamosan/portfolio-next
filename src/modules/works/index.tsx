@@ -1,6 +1,7 @@
 import type { GetStaticProps, NextPage } from "next";
 
 import { Underlined } from "@/shared/components/basics/Underlined";
+import { PageSeo } from "@/shared/components/layouts/PageSeo";
 import { getAllWorks } from "@/shared/utils/works";
 import type { Work } from "@/types/work";
 
@@ -14,6 +15,8 @@ type Props = {
 export const Works: NextPage<Props> = ({ works }) => {
   return (
     <>
+      <PageSeo path="/works" subtitle="WORKS" />
+
       <div className="pt-48 flex flex-col items-center">
         <Underlined as="h1">WORKS</Underlined>
         <Grid className="w-11/12 sm:w-4/5 max-w-[1000px] my-12">
