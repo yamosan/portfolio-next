@@ -3,7 +3,6 @@ import "scroll-behavior-polyfill";
 
 import type { AppProps } from "next/app";
 import dynamic from "next/dynamic";
-import NextHeadSeo from "next-head-seo";
 
 import Layout from "@/shared/components/layouts";
 import BgStateProvider from "@/shared/store/bgState";
