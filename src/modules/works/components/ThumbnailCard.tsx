@@ -32,7 +32,7 @@ export const ThumbnailCard: VFC<Props> = ({ work }) => {
           >
             <figcaption className="flex flex-col text-white max-w-full">
               <h3 className="font-semibold text-2xl truncate">{title}</h3>
-              <p className="font-light leading-none truncate">{genre}</p>
+              <div className="font-light leading-none truncate">{genre}</div>
             </figcaption>
           </div>
         </figure>

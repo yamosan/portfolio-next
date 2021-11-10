@@ -17,8 +17,8 @@ export const Works: NextPage<Props> = ({ works }) => {
     <>
       <PageSeo path="/works" subtitle="WORKS" />
 
-      <div className="pt-48 flex flex-col items-center">
-        <Underlined as="h1">WORKS</Underlined>
+      <section className="pt-48 flex flex-col items-center">
+        <Underlined as="h2">WORKS</Underlined>
         <Grid className="w-11/12 sm:w-4/5 max-w-[1000px] my-12">
           {works.map((work) => (
             <GridItem key={work.id}>
@@ -26,7 +26,7 @@ export const Works: NextPage<Props> = ({ works }) => {
             </GridItem>
           ))}
         </Grid>
-      </div>
+      </section>
     </>
   );
 };
