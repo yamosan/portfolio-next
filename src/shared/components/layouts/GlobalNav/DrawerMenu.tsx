@@ -40,7 +40,13 @@ export const DrawerMenu: VFC = () => {
         />
       </nav>
 
-      <Hamburger className="z-40" onClick={toggleOpen} buttonRole={isOpen ? "close" : "open"} ref={toggleBtnRef} />
+      <Hamburger
+        className="z-40"
+        onClick={toggleOpen}
+        buttonRole={isOpen ? "close" : "open"}
+        ref={toggleBtnRef}
+        aria-label="Open menu"
+      />
     </>
   );
 };
