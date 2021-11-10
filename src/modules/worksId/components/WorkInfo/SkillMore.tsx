@@ -9,7 +9,7 @@ type Props = {
 
 export const SkillMore: VFC<Props> = ({ keywords }) => {
   return (
-    <button className="flex flex-col items-center group rounded-sm">
+    <button className="flex flex-col items-center group rounded-sm" aria-label="view details">
       <span>
         <Arrow width={18} height={18} />
       </span>
