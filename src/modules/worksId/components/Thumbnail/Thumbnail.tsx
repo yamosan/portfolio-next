@@ -1,5 +1,8 @@
+import "react-lite-youtube-embed/dist/LiteYouTubeEmbed.css";
+
 import clsx from "clsx";
 import type { ComponentProps, VFC } from "react";
+import LiteYouTubeEmbed from "react-lite-youtube-embed";
 
 import { Image } from "@/shared/components/basics/Image";
 
@@ -15,13 +18,9 @@ export const Thumbnail: VFC<Props> = ({ title, thumbnailUrl, youtubeId, classNam
       className={clsx("relative aspect-h-9 aspect-w-16 rounded-lg border border-white border-opacity-10", className)}
     >
       {youtubeId ? (
-        <iframe
-          src={`https://www.youtube.com/embed/${youtubeId}`}
-          title={title}
-          frameBorder="0"
-          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-          className="absolute top-0 left-0 m-0 w-full h-full"
-        />
+        <div className="absolute top-0 left-0 m-0 w-full h-full">
+          <LiteYouTubeEmbed id={youtubeId} title={title} />
+        </div>
       ) : (
         <Image src={thumbnailUrl} alt={title} layout="fill" />
       )}
