@@ -31,6 +31,7 @@ export const WorkInfo: VFC<Props> = ({ work }) => {
           <dt className="text-xl font-medium">Skill:</dt>
           <dd className="ml-2 text-lg font-light">{skills.main}</dd>
           <div className="ml-2 self-center">
+            {/* TODO: dlの中にdt,dd,div以外を入れるのはNG */}
             <SkillMore keywords={skills.others} />
           </div>
         </div>
