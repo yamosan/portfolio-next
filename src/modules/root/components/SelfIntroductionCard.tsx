@@ -40,7 +40,7 @@ export const SelfIntroductionCard: VFC<Props> = ({ className, ...attrs }) => {
       {...attrs}
     >
       <div className="flex-[3] flex flex-col items-center">
-        <div className="mx-auto relative rounded-full overflow-hidden w-40 h-40 lg:w-56 lg:h-56">
+        <div className="mx-auto relative rounded-full overflow-hidden w-40 h-40 lg:w-56 lg:h-56 select-none">
           <Image layout="fill" src="/images/headshot.jpg" alt="私の写真" />
         </div>
         <p className="mt-4">Masato Yamori</p>
