@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import type { VFC } from "react";
+import type { ComponentProps, VFC } from "react";
 
 import type { Work } from "@/types/work";
 
@@ -7,15 +7,17 @@ import { SkillMore } from "./SkillMore";
 
 type Props = {
   work: Work;
-};
+} & ComponentProps<"div">;
 
-export const WorkInfo: VFC<Props> = ({ work }) => {
+export const WorkInfo: VFC<Props> = ({ work, className, ...attrs }) => {
   const { title, genre, role, skills, period } = work;
   return (
     <div
       className={clsx(
-        "bg-grayDark bg-opacity-70 rounded-lg border border-white border-opacity-50 px-5 py-5 text-white"
+        "bg-grayDark bg-opacity-70 rounded-lg border border-white border-opacity-50 px-5 py-5 text-white",
+        className
       )}
+      {...attrs}
     >
       <h3 className="font-semibold text-2xl text-center">{title}</h3>
       <dl className="mt-4 flex flex-col space-y-4">

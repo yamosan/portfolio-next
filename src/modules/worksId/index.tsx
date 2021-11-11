@@ -24,7 +24,7 @@ export const WorksId: NextPage<Props> = ({ work }) => {
         {isLg && (
           <aside className="flex-shrink-0 z-20" style={{ width: "280px" }}>
             <div className="sticky top-thead">
-              <WorkInfo work={work} />
+              <WorkInfo work={work} className="z-10" />
               <ul className="mt-6 flex justify-center space-x-2">
                 {work.urls?.site && (
                   <li>
