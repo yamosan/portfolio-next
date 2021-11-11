@@ -19,7 +19,7 @@ const Root: NextPage = () => {
       <PageSeo path="/" />
 
       <Div100vh as="section" className="relative flex items-center justify-center">
-        <h1 className="text-white text-6xl font-semibold flex flex-col sm:flex-row">
+        <h1 className="text-white text-6xl font-semibold flex flex-col sm:flex-row select-none">
           <span>Hello,&ensp;</span>
           <span>
             I&apos;m Yam<span className="text-main">o</span>.
