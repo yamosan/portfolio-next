@@ -4,6 +4,7 @@ import type { ComponentProps, VFC } from "react";
 import { useCallback } from "react";
 
 import { useCurrentBreakpoint } from "@/shared/hooks/useCurrentBreakpoint";
+import { useOnScrolling } from "@/shared/hooks/useOnScrolling";
 import { useBgState } from "@/shared/store/bgState";
 
 import { DrawerMenu, FlexMenu } from "./GlobalNav";
@@ -11,6 +12,8 @@ import { DrawerMenu, FlexMenu } from "./GlobalNav";
 type Props = ComponentProps<"header">;
 
 export const Header: VFC<Props> = ({ className, ...attrs }) => {
+  const scrolling = useOnScrolling();
+
   const { setCount } = useBgState();
   const router = useRouter();
   const { isSm } = useCurrentBreakpoint();
@@ -32,7 +35,12 @@ export const Header: VFC<Props> = ({ className, ...attrs }) => {
   return (
     <header
       className={clsx(
-        "fixed z-50 h-thead top-0 w-full px-5 sm:px-8 flex items-center justify-between text-white bg-black bg-opacity-90",
+        "fixed z-50 h-thead top-0 w-full px-5 sm:px-8 flex items-center justify-between text-white",
+        "bg-black transition-all duration-700",
+        {
+          "bg-opacity-90": scrolling,
+          "bg-opacity-0": !scrolling,
+        },
         className
       )}
       {...attrs}
