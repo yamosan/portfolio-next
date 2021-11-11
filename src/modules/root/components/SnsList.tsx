@@ -38,7 +38,7 @@ export const SnsList: VFC<Props> = ({ className, ...attrs }) => {
           <li key={name}>
             <ExternalLink
               href={href}
-              className={clsx("rounded-md p-1.5", "transition duration-200 transform scale-100 hover:scale-125")}
+              className={clsx("block rounded-md p-1.5", "transition duration-200 transform scale-100 hover:scale-125")}
               aria-label={name}
             >
               {icon}
