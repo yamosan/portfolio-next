@@ -9,17 +9,20 @@ const portfolio: Work = {
   genre: "web",
   role: "solo",
   skills: {
-    main: "React",
-    others: ["TypeScript", "p5.js", "styled-components", "Firebase"],
+    main: "React(Next.js)",
+    others: ["TypeScript", "p5.js", "Tailwind CSS"],
   },
   period: "1month",
   urls: {
-    repository: "https://github.com/yamori-masato/portfolio",
+    repository: "https://github.com/yamosan/portfolio",
   },
   content: [
     {
       head: "outline",
-      description: [`本サイトです。デザインからコーディングまで1人で制作しました。`],
+      description: [
+        `本サイトです。デザインからコーディングまで1人で制作しました。`,
+        `※ 2021/11/11にリニューアルしました。(CRA -> Next.js)`,
+      ],
     },
     {
       head: "concept",
@@ -43,9 +46,9 @@ const portfolio: Work = {
     {
       head: "impression",
       description: [
-        `Webサイトをレスポンシブ含めてしっかりコーディングするのは初めてだった為、デバイス・ブラウザ間の差異をなくすのにはかなり苦労しました。`,
-        `iosで100vhが表示ずれしたり、matchMediaを使おうとしたらsafariで実装されていないからpolyfillを実装したり...`,
-        `完成してから多くの人に試してもらう大切さを身をもって実感しました。`,
+        `CRA, firebase-hosting の構成から Next.js, Vercelの構成に移行しました。`,
+        `一から作り直しましたが、ディレクトリ構成、コンポーネント設計等、昔と比べると成長を感じられました。`,
+        `移行後、一番のこだわりはキー操作です。focus-visibleでスタイルが変わるようにしたり、スマホのモーダルでフォーカストラップを実装したりと、細部までこだわりました。`,
       ],
     },
   ],

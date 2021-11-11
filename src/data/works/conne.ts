@@ -15,7 +15,7 @@ const conne: Work = {
   },
   period: "2months",
   urls: {
-    repository: "https://github.com/yamori-masato/Conne",
+    repository: "https://github.com/yamosan/Conne",
     site: "https://conne-game.herokuapp.com/",
   },
   content: [

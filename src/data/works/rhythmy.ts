@@ -12,7 +12,7 @@ const rhythmy: Work = {
   skills: { main: "TypeScript", others: ["p5.js", "Tone.js", "Socket.IO", "Express.js", "webpack", "GitHub Actions"] },
   period: "3months",
   urls: {
-    repository: "https://github.com/yamori-masato/rhythm",
+    repository: "https://github.com/yamosan/rhythm",
   },
   content: [
     {
