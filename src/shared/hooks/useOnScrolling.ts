@@ -2,7 +2,6 @@
 // @ts-nocheck
 import { useEffect, useState } from "react";
 
-// TODO: debounceを使う
 export const useOnScrolling = (offset = 0) => {
   const [scrolled, setScrolled] = useState(false);
 
