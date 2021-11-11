@@ -1,5 +1,6 @@
 import "@/shared/styles/global.css";
 import "scroll-behavior-polyfill";
+import "focus-visible";
 
 import type { AppProps } from "next/app";
 import dynamic from "next/dynamic";
