@@ -14,7 +14,7 @@ export const useOnScrolling = (offset = 0) => {
       return document.documentElement;
     };
 
-    const handleOnScroll = () => {
+    const onScroll = () => {
       const scrollY = scrollingElement().scrollTop;
       if (scrollY <= offset) {
         setScrolled(false);
@@ -23,9 +23,17 @@ export const useOnScrolling = (offset = 0) => {
       }
     };
 
-    document.addEventListener("scroll", handleOnScroll, { passive: true });
+    // debounce
+    let timeoutId: ReturnType<typeof setTimeout>;
+    const onScrollDebounce = () => {
+      if (timeoutId) clearTimeout(timeoutId);
+      timeoutId = setTimeout(onScroll, 100);
+    };
+
+    document.addEventListener("scroll", onScrollDebounce, { passive: true });
     return () => {
-      document.removeEventListener("scroll", handleOnScroll);
+      document.removeEventListener("scroll", onScrollDebounce);
+      if (timeoutId) clearTimeout(timeoutId);
     };
   }, [offset]);
 

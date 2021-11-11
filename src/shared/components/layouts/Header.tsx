@@ -36,7 +36,7 @@ export const Header: VFC<Props> = ({ className, ...attrs }) => {
     <header
       className={clsx(
         "fixed z-50 h-thead top-0 w-full px-5 sm:px-8 flex items-center justify-between text-white",
-        "bg-black transition-all duration-700",
+        "bg-black transition-all duration-500",
         {
           "bg-opacity-90": scrolling,
           "bg-opacity-0": !scrolling,
