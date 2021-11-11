@@ -39,7 +39,7 @@ export const PageSeo: FC<PageSeoProps> = ({
         siteName: title,
       }}
       twitter={{
-        card: "summary",
+        card: "summary_large_image",
       }}
     />
   );
