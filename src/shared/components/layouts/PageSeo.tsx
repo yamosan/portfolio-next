@@ -12,7 +12,7 @@ export const PageSeo: FC<PageSeoProps> = ({
   path,
   subtitle,
   description = "yamoのポートフォリオサイト",
-  ogImagePath = "/images/ogp.jpg",
+  ogImagePath = "/images/ogp.png",
 }) => {
   const title = subtitle ? `yamo's portfolio | ${subtitle}` : "yamo's portfolio";
   const APP_ROOT_URL = process.env.NEXT_PUBLIC_SITE_DOMAIN;
