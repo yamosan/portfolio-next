@@ -35,13 +35,15 @@ export const SnsList: VFC<Props> = ({ className, ...attrs }) => {
     <IconContext.Provider value={{ color: "white", style: { height: "24px", width: "24px" } }}>
       <ul className={clsx("flex space-x-4", className)} {...attrs}>
         {SNS.map(({ name, href, icon }) => (
-          <ExternalLink
-            href={href}
-            key={name}
-            className={clsx("rounded-md p-1.5", "transition duration-200 transform scale-100 hover:scale-125")}
-          >
-            <li>{icon}</li>
-          </ExternalLink>
+          <li key={name}>
+            <ExternalLink
+              href={href}
+              className={clsx("rounded-md p-1.5", "transition duration-200 transform scale-100 hover:scale-125")}
+              aria-label={name}
+            >
+              {icon}
+            </ExternalLink>
+          </li>
         ))}
       </ul>
     </IconContext.Provider>
