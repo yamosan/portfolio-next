@@ -19,7 +19,7 @@ export const PageSeo: FC<PageSeoProps> = ({
   const pageUrl = APP_ROOT_URL + path;
   const ogImageUrl = APP_ROOT_URL + ogImagePath;
 
-  console.log(ogImagePath);
+  console.log(process.env.NEXT_PUBLIC_SITE_DOMAIN);
   return (
     <NextHeadSeo
       title={title}
