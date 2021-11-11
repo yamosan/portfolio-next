@@ -3,6 +3,8 @@ import type { ComponentProps, VFC } from "react";
 
 import { Image } from "@/shared/components/basics/Image";
 
+import { SnsList } from "./SnsList";
+
 const ABOUT_ME = [
   {
     dt: "生年月日",
@@ -26,7 +28,9 @@ const ABOUT_ME = [
   },
 ];
 
-export const SelfIntroductionCard: VFC<ComponentProps<"div">> = ({ className, ...attrs }) => {
+type Props = ComponentProps<"div">;
+
+export const SelfIntroductionCard: VFC<Props> = ({ className, ...attrs }) => {
   return (
     <div
       className={clsx(
@@ -35,12 +39,14 @@ export const SelfIntroductionCard: VFC<ComponentProps<"div">> = ({ className, ..
       )}
       {...attrs}
     >
-      <div className="flex-[3] flex flex-col items-center space-y-4">
+      <div className="flex-[3] flex flex-col items-center">
         <div className="mx-auto relative rounded-full overflow-hidden w-40 h-40 lg:w-56 lg:h-56">
           <Image layout="fill" src="/images/headshot.jpg" alt="私の写真" />
         </div>
-        <p>Yamori Masato</p>
-        <div>{/* TODO: SNS */}</div>
+        <p className="mt-4">Masato Yamori</p>
+        <div className="mt-2">
+          <SnsList className="w-full" />
+        </div>
       </div>
 
       <div className="flex-[7]">
