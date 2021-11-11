@@ -30,7 +30,7 @@ export const Contents: VFC<Props> = ({ contents, className, ...attrs }) => {
             </div>
           )}
 
-          <div className="bg-gray bg-opacity-70 px-5 py-4 sm:px-9 sm:py-8 rounded-lg">
+          <div className="w-full bg-gray bg-opacity-70 px-5 py-4 sm:px-9 sm:py-8 rounded-lg">
             {content.description.map((p, i) => (
               <p
                 key={i.toString()}
