@@ -26,14 +26,14 @@ export const WorksId: NextPage<Props> = ({ work }) => {
             <div className="sticky top-thead">
               <WorkInfo work={work} className="z-10" />
               <ul className="mt-6 flex justify-center space-x-2">
-                {work.urls?.site && (
-                  <li>
-                    <ViewSource href={work.urls?.site} />
-                  </li>
-                )}
                 {work.urls?.repository && (
                   <li>
-                    <VisitWebsite href={work.urls?.repository} />
+                    <ViewSource href={work.urls?.repository} />
+                  </li>
+                )}
+                {work.urls?.site && (
+                  <li>
+                    <VisitWebsite href={work.urls?.site} />
                   </li>
                 )}
               </ul>
