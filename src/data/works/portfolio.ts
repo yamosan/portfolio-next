@@ -22,6 +22,7 @@ const portfolio: Work = {
       description: [
         `本サイトです。デザインからコーディングまで1人で制作しました。`,
         `※ 2021/11/11にリニューアルしました。(CRA -> Next.js)`,
+        `旧レポジトリ: https://github.com/yamosan/portfolio-cra`,
       ],
     },
     {

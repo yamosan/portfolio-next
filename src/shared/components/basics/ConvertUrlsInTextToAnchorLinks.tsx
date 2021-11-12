@@ -1,6 +1,8 @@
 import type { VFC } from "react";
 import reactStringReplace from "react-string-replace";
 
+import { ExternalLink } from "./ExternalLink";
+
 type Props = {
   children: string;
 };
@@ -11,9 +13,9 @@ export const ConvertUrlsInTextToAnchorLinks: VFC<Props> = ({ children }) => {
   return (
     <>
       {reactStringReplace(children, regExp, (match, _i) => (
-        <a href={match} className="underline">
+        <ExternalLink href={match} className="underline">
           {match}
-        </a>
+        </ExternalLink>
       ))}
     </>
   );
