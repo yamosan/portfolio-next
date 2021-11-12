@@ -1,6 +1,7 @@
 import clsx from "clsx";
 import type { ComponentProps, VFC } from "react";
 
+import { ConvertUrlsInTextToAnchorLinks } from "@/shared/components/basics/ConvertUrlsInTextToAnchorLinks";
 import { Underlined } from "@/shared/components/basics/Underlined";
 import type { Work } from "@/types/work";
 
@@ -36,7 +37,7 @@ export const Contents: VFC<Props> = ({ contents, className, ...attrs }) => {
                 key={i.toString()}
                 className="break-words break-all font-light leading-loose sm:leading-loose text-white text-sm sm:text-base"
               >
-                {p}
+                <ConvertUrlsInTextToAnchorLinks>{p}</ConvertUrlsInTextToAnchorLinks>
               </p>
             ))}
           </div>
