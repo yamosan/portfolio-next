@@ -23,6 +23,7 @@
     "react-lite-youtube-embed": "^2.1.0",
     "react-medium-image-zoom": "^4.3.5",
     "react-p5-wrapper": "^3.0.2",
+    "react-string-replace": "^0.4.4",
     "scroll-behavior-polyfill": "^2.0.13"
   },
   "devDependencies": {
