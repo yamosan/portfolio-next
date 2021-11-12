@@ -36,7 +36,7 @@ const geikoten2021: Work = {
         `芸工展では毎年、学生から1人1作品提出してもらい当日に展示しています。今年はこれをWebで実現するのでデータの手入力は極力避けたかったです(100作品以上)。なので、google formで提出してもらった作品データがそのままAPIとして機能するようにGASで実装しました。`,
         `③ 作品投票機能`,
         `投票情報の保存にはFirestoreを用いました。ひとりで投票できる作品数に上限はありませんが、既に投票済みの作品には投票できない仕様なのでlocal storageを使用しました。`,
-        `(ページURL: https://geikousai-ncu.com/2021/project/exhibition/shutter)`,
+        `(ページURL: https://geikousai-ncu.com/2021/project/exhibition/shutter )`,
       ],
     },
     {
