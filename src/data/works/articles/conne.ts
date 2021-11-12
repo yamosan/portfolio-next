@@ -30,8 +30,11 @@ const conne: Work = {
     {
       head: "rules",
       images: [
-        { src: "/images/works/conne/rules/1.png", alt: "ルール1" },
-        { src: "/images/works/conne/rules/2.png", alt: "ルール2" },
+        {
+          src: "/images/works/conne/rules/1.png",
+          alt: "ルール1: 既にあるコマに重ねて配置したり盤面をはみ出しての配置は禁止。",
+        },
+        { src: "/images/works/conne/rules/2.png", alt: "ルール2: タテヨコ4連結以上の盤面を作れたら勝利。" },
       ],
       description: [
         `手前の3種類のコマが自分、奥側が相手のコマとなります。
@@ -44,7 +47,7 @@ const conne: Work = {
       head: "system",
       images: [],
       description: [
-        `バックエンドでは、ランダムマッチはRedis、WebSocketはRailsのActionCableを使って実装しています。
+        `バックエンドのランダムマッチでは、RedisとActionCable(WebSocket)を使って実装しています。
           フロントエンドはReactで実装しています。フロントとバックそれぞれを独立させる構成をとりました。
           `,
       ],
@@ -55,7 +58,7 @@ const conne: Work = {
         `フロントエンドに興味を持って初めてReactを触った時の作品です。
           ゲームの進行状況はReduxで管理しました。ですが、状態遷移がそこまで複雑でなかった為、余計に複雑にしてしまうことになったのが反省点です。
           `,
-        `これまでRubyでバックエンドを書くことがメインでしたが、今回フロントエンド↔︎バックエンドのやりとりを実装することで、より理解を深められたと思います。
+        `これまでRubyでバックエンドを書くことがメインでしたが、今回フロントエンド↔︎バックエンドのやりとりを実装することでより理解を深められたと思います。
           `,
       ],
     },

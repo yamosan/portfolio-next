@@ -29,7 +29,7 @@ const geikoten2021: Work = {
       images: [],
       description: [
         `① デプロイ`,
-        `Github Actionsで自動デプロイを組んでいます。`,
+        `Github Actionsでデプロイを自動化しています。`,
         ` - github pages(デザイナー確認用)`,
         ` - SCPでレンタルサーバーにデプロイ(本番環境)`,
         `② 作品投稿`,
