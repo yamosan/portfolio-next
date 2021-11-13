@@ -22,7 +22,7 @@ export const Thumbnail: VFC<Props> = ({ title, thumbnailUrl, youtubeId, classNam
           <LiteYouTubeEmbed id={youtubeId} title={title} />
         </div>
       ) : (
-        <Image src={thumbnailUrl} alt={title} layout="fill" />
+        <Image src={thumbnailUrl} alt={title} layout="fill" priority />
       )}
     </div>
   );
