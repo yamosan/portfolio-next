@@ -12,8 +12,8 @@ const regExp = /(https?:\/\/[\w!?/+\-_~;.,*&@#$%()'[\]]+)/g;
 export const ConvertUrlsInTextToAnchorLinks: VFC<Props> = ({ children }) => {
   return (
     <>
-      {reactStringReplace(children, regExp, (match, _i) => (
-        <ExternalLink href={match} className="underline">
+      {reactStringReplace(children, regExp, (match, i) => (
+        <ExternalLink href={match} className="underline" key={i.toString()}>
           {match}
         </ExternalLink>
       ))}
