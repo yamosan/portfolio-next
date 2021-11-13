@@ -7,16 +7,17 @@ import type { Work } from "@/types/work";
 
 type Props = {
   work: Work;
+  priority?: boolean;
 };
 
-export const ThumbnailCard: VFC<Props> = ({ work }) => {
+export const ThumbnailCard: VFC<Props> = ({ work, priority }) => {
   const { id, thumbnail, title, genre } = work;
 
   return (
     <Link href={`/works/${id}`}>
       <a className="block group rounded-lg overflow-hidden border border-white border-opacity-10 outline-none focus-visible:ring-main focus-visible:ring-2 focus-visible:ring-opacity-80">
         <figure className="relative aspect-w-16 aspect-h-9 bg-grayDark">
-          <Image src={thumbnail.imageUrl} alt={title} layout="fill" />
+          <Image src={thumbnail.imageUrl} alt={title} layout="fill" priority={priority} />
           {/* TODO: linear-gradientをより見やすく */}
           <div
             className={clsx(

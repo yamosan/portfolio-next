@@ -20,9 +20,9 @@ export const Works: NextPage<Props> = ({ works }) => {
       <section className="pt-48 flex flex-col items-center">
         <Underlined as="h2">WORKS</Underlined>
         <Grid className="w-11/12 sm:w-4/5 max-w-[1000px] my-12">
-          {works.map((work) => (
+          {works.map((work, i) => (
             <GridItem key={work.id}>
-              <ThumbnailCard work={work} />
+              <ThumbnailCard work={work} priority={i <= 4} />
             </GridItem>
           ))}
         </Grid>
