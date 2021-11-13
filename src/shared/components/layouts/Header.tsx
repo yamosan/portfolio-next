@@ -6,31 +6,27 @@ import { useCallback } from "react";
 import { useCurrentBreakpoint } from "@/shared/hooks/useCurrentBreakpoint";
 import { useOnScrolling } from "@/shared/hooks/useOnScrolling";
 import { useBgState } from "@/shared/store/bgState";
+import { useRootRef } from "@/shared/store/rootRef";
 
 import { DrawerMenu, FlexMenu } from "./GlobalNav";
 
 type Props = ComponentProps<"header">;
 
 export const Header: VFC<Props> = ({ className, ...attrs }) => {
-  const scrolling = useOnScrolling();
+  const rootRef = useRootRef();
+  const scrolling = useOnScrolling(rootRef);
 
   const { setCount } = useBgState();
   const router = useRouter();
   const { isSm } = useCurrentBreakpoint();
 
   const handleClick = useCallback(() => {
-    if (setCount) {
-      if (router && router.pathname === "/") {
-        const elm = document.getElementById("root");
-        if (elm) {
-          elm.scrollTo({ top: 0 });
-        }
-      } else {
-        router.push("/");
-      }
-      setCount((count) => count + 1);
-    }
-  }, [setCount, router]);
+    const rootElm = rootRef.current;
+    if (!rootElm || !setCount) return;
+
+    router.push("/");
+    setCount((count) => count + 1);
+  }, [setCount, router, rootRef]);
 
   return (
     <header

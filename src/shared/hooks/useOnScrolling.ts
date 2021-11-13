@@ -1,11 +1,14 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 // @ts-nocheck
+import type { RefObject } from "react";
 import { useEffect, useState } from "react";
 
-export const useOnScrolling = (offset = 0) => {
+export const useOnScrolling = (containerRef?: RefObject<HTMLElement>, offset = 0) => {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
+    const containerElm = containerRef?.current;
+
     const scrollingElement = (): Element => {
       const browser = window.navigator.userAgent.toLowerCase();
       if ("scrollingElement" in document) return document.scrollingElement;
@@ -14,7 +17,7 @@ export const useOnScrolling = (offset = 0) => {
     };
 
     const onScroll = () => {
-      const scrollY = scrollingElement().scrollTop;
+      const scrollY = containerElm?.scrollTop || scrollingElement().scrollTop;
       if (scrollY <= offset) {
         setScrolled(false);
       } else {
@@ -29,12 +32,14 @@ export const useOnScrolling = (offset = 0) => {
       timeoutId = setTimeout(onScroll, 100);
     };
 
-    document.addEventListener("scroll", onScrollDebounce, { passive: true });
+    const obj = containerElm || document;
+
+    obj.addEventListener("scroll", onScrollDebounce, { passive: true });
     return () => {
-      document.removeEventListener("scroll", onScrollDebounce);
+      obj.removeEventListener("scroll", onScrollDebounce);
       if (timeoutId) clearTimeout(timeoutId);
     };
-  }, [offset]);
+  }, [offset, containerRef]);
 
   return scrolled;
 };
