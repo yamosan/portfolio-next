@@ -20,7 +20,7 @@ export const WorksId: NextPage<Props> = ({ work }) => {
     <>
       <PageSeo path={`/works/${work.id}`} subtitle="WORKS" />
 
-      <div className="w-11/12 md:w-10/12 mx-auto pt-28 flex justify-between">
+      <div className="w-11/12 md:w-10/12 max-w-app mx-auto pt-28 flex justify-between">
         {isLg && (
           <aside className="flex-shrink-0 z-20" style={{ width: "280px" }}>
             <div className="sticky top-thead">
