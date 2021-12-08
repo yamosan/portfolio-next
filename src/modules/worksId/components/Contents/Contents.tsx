@@ -19,7 +19,12 @@ export const Contents: VFC<Props> = ({ contents, className, ...attrs }) => {
           <Underlined as="h3">{content.head}</Underlined>
 
           {content.images && !!content.images.length && (
-            <div className="w-full flex space-x-2.5 overflow-x-auto max-w-full">
+            <div
+              className={clsx("w-full flex space-x-2.5 overflow-x-auto max-w-full", {
+                "justify-center": content.images.length === 1,
+                "justify-start": content.images.length > 1,
+              })}
+            >
               {content.images?.map((image) => {
                 return (
                   // TODO: 2枚以上でも対応する
