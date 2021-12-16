@@ -21,10 +21,11 @@ export const Header: VFC<Props> = ({ className, ...attrs }) => {
   const handleClick = useCallback(() => {
     if (setCount) {
       if (router && router.pathname === "/") {
-        const elm = document.getElementById("root");
-        if (elm) {
-          elm.scrollTo({ top: 0 });
-        }
+        // const elm = document.getElementById("root");
+        // if (elm) {
+        //   elm.scrollTo({ top: 0 });
+        // }
+        window.scrollTo({ top: 0 });
       } else {
         router.push("/");
       }
