@@ -3,7 +3,7 @@ import type { Work } from "@/types/work";
 const enechalle: Work = {
   id: "enechalle",
   thumbnail: {
-    imageUrl: "/images/works/enechalle/thumbnail.png",
+    imageUrl: "/images/works/enechalle/thumbnail.jpg",
   },
   title: "#エナドリチャレンジ応援わんこ",
   genre: "web",

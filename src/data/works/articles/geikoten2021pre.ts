@@ -3,7 +3,7 @@ import type { Work } from "@/types/work";
 const geikoten2021pre: Work = {
   id: "geikoten2021-pre",
   thumbnail: {
-    imageUrl: "/images/works/geikoten2021-pre/thumbnail.png",
+    imageUrl: "/images/works/geikoten2021-pre/thumbnail.jpg",
   },
   title: "芸工展2021プレサイト",
   genre: "web",

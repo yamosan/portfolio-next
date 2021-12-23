@@ -3,7 +3,7 @@ import type { Work } from "@/types/work";
 const helium: Work = {
   id: "helium",
   thumbnail: {
-    imageUrl: "/images/works/helium/thumbnail.png",
+    imageUrl: "/images/works/helium/thumbnail.jpg",
   },
   title: "HELIUM",
   genre: "web",

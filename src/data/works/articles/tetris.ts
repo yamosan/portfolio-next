@@ -3,7 +3,7 @@ import type { Work } from "@/types/work";
 const tetris: Work = {
   id: "tetris",
   thumbnail: {
-    imageUrl: "/images/works/tetris/thumbnail.png",
+    imageUrl: "/images/works/tetris/thumbnail.jpg",
     youtubeId: "Rmd2ofFcIuo",
   },
   title: "Tetris",

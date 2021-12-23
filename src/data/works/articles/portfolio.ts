@@ -3,7 +3,7 @@ import type { Work } from "@/types/work";
 const portfolio: Work = {
   id: "portfolio",
   thumbnail: {
-    imageUrl: "/images/works/portfolio/thumbnail.png",
+    imageUrl: "/images/works/portfolio/thumbnail.jpg",
   },
   title: "portfolio",
   genre: "web",
