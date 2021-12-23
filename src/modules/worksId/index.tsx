@@ -18,7 +18,7 @@ export const WorksId: NextPage<Props> = ({ work }) => {
 
   return (
     <>
-      <PageSeo path={`/works/${work.id}`} subtitle="WORKS" />
+      <PageSeo path={`/works/${work.id}`} subtitle="WORKS" ogImagePath={`/images/works/${work.id}/thumbnail.jpg`} />
 
       <div className="w-11/12 md:w-10/12 max-w-app mx-auto pt-28 flex justify-between">
         {isLg && (
