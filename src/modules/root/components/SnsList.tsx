@@ -23,7 +23,7 @@ const SNS = [
   },
   {
     name: "twitter",
-    href: "https://twitter.com/tokage___sippo",
+    href: "https://twitter.com/_yamosan",
     icon: <SiTwitter />,
   },
 ];
