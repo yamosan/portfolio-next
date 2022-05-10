@@ -7,7 +7,7 @@ const APP_MAX_WIDTH_UTIL = { app: APP_MAX_WIDTH };
 
 module.exports = {
   mode: "jit",
-  purge: ["./src/**/*.{ts,tsx}"],
+  content: ["./src/**/*.{ts,tsx}"],
   darkMode: false,
   theme: {
     colors: {
@@ -51,5 +51,5 @@ module.exports = {
     extend: {},
     scrollbar: ["rounded"],
   },
-  plugins: [require("tailwind-scrollbar"), require("@tailwindcss/aspect-ratio")],
+  plugins: [require("tailwind-scrollbar")],
 };

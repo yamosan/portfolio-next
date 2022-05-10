@@ -14,9 +14,7 @@ type Props = {
 
 export const Thumbnail: VFC<Props> = ({ title, thumbnailUrl, youtubeId, className }) => {
   return (
-    <div
-      className={clsx("relative aspect-h-9 aspect-w-16 rounded-lg border border-white border-opacity-10", className)}
-    >
+    <div className={clsx("relative aspect-[16/9] rounded-lg border border-white border-opacity-10", className)}>
       {youtubeId ? (
         <div className="absolute top-0 left-0 m-0 w-full h-full">
           <LiteYouTubeEmbed id={youtubeId} title={title} />

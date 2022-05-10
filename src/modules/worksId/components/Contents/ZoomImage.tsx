@@ -33,7 +33,7 @@ export const ZoomImage: VFC<Props> = ({ src, alt }) => {
       overlayBgColorStart={"rgba(0, 0, 0, 0)"}
       overlayBgColorEnd={"rgba(0, 0, 0, 0.75)"}
     >
-      <div className="w-full aspect-h-9 aspect-w-16 relative bg-grayDark rounded-lg overflow-hidden border border-white border-opacity-10">
+      <div className="w-full aspect-[16/9] relative bg-grayDark rounded-lg overflow-hidden border border-white border-opacity-10">
         <Image src={src} alt={alt} layout="fill" objectFit="cover" />
       </div>
     </Zoom>
