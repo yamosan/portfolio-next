@@ -51,5 +51,5 @@ module.exports = {
     extend: {},
     scrollbar: ["rounded"],
   },
-  plugins: [require("tailwind-scrollbar"), require("@tailwindcss/aspect-ratio")],
+  plugins: [require("tailwind-scrollbar")],
 };
