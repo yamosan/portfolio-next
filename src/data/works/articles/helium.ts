@@ -11,7 +11,7 @@ const helium: Work = {
   skills: { main: "React", others: ["WebRTC", "Tone.js", "ReduxToolkit", "Firebase", "ChakraUI"] },
   period: "1months",
   urls: {
-    site: "https://helium-chat.com",
+    site: "https://helium-86111.web.app",
   },
   content: [
     {
